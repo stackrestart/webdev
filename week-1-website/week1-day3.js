@@ -2,7 +2,7 @@ var a = 1;
 a = "ashwik";
 a = true;
 
-console.log(a)
+// console.log(a)
 
 let number = 42;             // Number
 let string = "Hello World";  // String
@@ -21,13 +21,14 @@ function greet(name) {
 let message = greet("Ashwik"); 
 
 for (let i = 0; i < 5; i++) {
-    console.log(i); // Outputs 0 to 4
+    // console.log(i); // Outputs 0 to 4
 }
+
 
 // While loop
 let j = 0;
 while (j < 5) {
-    console.log(j); // Outputs 0 to 4
+    // console.log(j); // Outputs 0 to 4
     j++;
 }
 
@@ -54,3 +55,36 @@ const user12 = {
 }
 
 const city = user12.address.city;
+
+const newUser = [{
+    userName:"Ashwik",
+    age:27,
+    city:"Denton",
+    gender:"Male"
+},
+{
+    userName:"Anwesh",
+    age:17,
+    city:"Tempe",
+    gender:"Male"
+},
+{
+    userName:"Sagi",
+    age:19,
+    city:"Tempe",
+    gender:"Female"
+
+}]
+
+function solve(users){
+    arr2 = []
+    for(let i = 0;i < users.length;i++){
+        if(users[i].age > 18){
+            arr2.push(users[i].userName);
+        }
+    }
+    return arr2;
+    }
+
+console.log(solve(newUser));
+
