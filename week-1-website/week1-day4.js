@@ -45,8 +45,30 @@ function doOperation(a,b,op){
 
 
 function afterFileRead(err,contents){
-    console.log(contents);
+    // console.log(contents);
 }
 fs.readFile("a.txt","utf-8",afterFileRead); //here afterFileRead function is called a callback function
 fs.readFile("b.txt","utf-8",afterFileRead);
-console.log("Done");
+// console.log("Done");
+
+function timeout(){
+    console.log("click the button");
+}
+
+console.log("Hi")
+setTimeout(timeout,1000); //IO intensive // even though this code is 1 sec, and the expensive operation from for loop is 5 sec approx, this timeout is executed first because thread is not free
+console.log("Welcome")
+// 3-4 sec
+let c = 0;
+for(let i = 0; i < 10000000000; i++){
+    c= c+1
+}
+console.log("Expensive operation done"); //CPU intentive
+
+//output
+// Hi
+// Welcome
+// Expensive operation done
+// clcik the button
+
+// when doing cpu intensive task, that is executed first, then only input output tasks start
