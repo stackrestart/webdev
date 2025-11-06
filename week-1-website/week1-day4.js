@@ -69,6 +69,6 @@ console.log("Expensive operation done"); //CPU intentive
 // Hi
 // Welcome
 // Expensive operation done
-// clcik the button
+// click the button
 
 // when doing cpu intensive task, that is executed first, then only input output tasks start
